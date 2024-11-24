@@ -5,6 +5,10 @@
 	"features": {
 		"ghcr.io/devcontainers/features/rust:1": {
 			"version": "1.82.0"
+		},
+		"ghcr.io/devcontainers/features/docker-in-docker:2": {
+			"version": "27.0.3-debian11u1",
+			"moby": true
 		}
 	}
 }
