@@ -1,13 +1,6 @@
 {
 	"name": "rust",
-	"build": {
-		"dockerfile": "Dockerfile"
-	},
-	"features": {
-		"ghcr.io/devcontainers/features/rust:1": {
-			"version": "1.82.0"
-		}
-	},
+	"image": "ghcr.io/hrko/volume-init-s3-objects-devcontainer:latest",
 	"customizations": {
 		"vscode": {
 			"extensions": [
