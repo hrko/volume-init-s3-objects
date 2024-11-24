@@ -22,6 +22,16 @@ jobs:
       image: ghcr.io/${{ github.repository }}-devcontainer:latest
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/cache@v3
+        id: cache-cargo
+        with:
+          key: cache-cargo-key
+          path: /usr/local/cargo
+      - uses: actions/cache@v3
+        id: cache-target
+        with:
+          key: cache-target-key
+          path: ./target
       - run: task init
       - run: task build
       - name: Upload release assets
