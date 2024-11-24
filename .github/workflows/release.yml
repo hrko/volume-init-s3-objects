@@ -27,6 +27,8 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
+          REPO="${GITHUB_REPOSITORY#${GITHUB_REPOSITORY_OWNER}/}"
+          git config --global --add safe.directory /__w/$REPO/$REPO
           mv target/x86_64-unknown-linux-musl/release/$BIN $BIN-amd64
           mv target/aarch64-unknown-linux-musl/release/$BIN $BIN-arm64
           gh release upload ${{ github.event.release.tag_name }} $BIN-amd64 $BIN-arm64
