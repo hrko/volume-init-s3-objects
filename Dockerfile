@@ -8,6 +8,6 @@ RUN if [ "$(uname -m)" = "x86_64" ]; then \
       mv /volume-init-s3-objects-aarch64 /volume-init-s3-objects; \
     fi
 
-FROM scratch
+FROM gcr.io/distroless/static-debian12
 COPY --from=copy /volume-init-s3-objects /volume-init-s3-objects
 ENTRYPOINT [ "/volume-init-s3-objects" ]
