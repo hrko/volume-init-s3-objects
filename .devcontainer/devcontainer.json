@@ -5,7 +5,8 @@
 		"vscode": {
 			"extensions": [
 				"redhat.vscode-yaml",
-				"yzhang.markdown-all-in-one"
+				"yzhang.markdown-all-in-one",
+				"github.vscode-github-actions"
 			]
 		}
 	}
